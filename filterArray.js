@@ -1,36 +1,28 @@
-// create a set
-let map1 = new Map();
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// insert key-value pair
-map1.set('info', {name: 'vrushali', age: 25});
-
-console.log(map1); 
-
-
-// access the elements of a Map
-console.log(map1.get('info')); 
-
-/* removing all element
-map1.clear();
-console.log(map1);
-*/
-// To check the Size of map 
-console.log(map1.size);
-
-
-// we can create a map by using loop method.
-let map2 = new Map();
-map2.set('name', 'Mrunali');
-map2.set('age', '21');
-
-// looping through Map
-for (let [key, value] of map2) {
-    console.log(key + '- ' + value);
+// function to check even numbers
+function checkEven(number) {
+  if (number % 2 == 0)
+    return true;
+  else
+    return false;
 }
 
-// we can iterate over the Map and get the key using the keys() method.
+// create a new array by filter even numbers from the numbers array
+let evenNumbers = numbers.filter(checkEven);
+console.log(evenNumbers);
+// Output: [ 2, 4, 6, 8, 10 ]
 
-// looping through the Map
-for (let key of map2.keys()) {
-    console.log(key)
+
+// function to check even numbers
+function checkOdd(number) {
+    if (number % 2 != 0)
+      return true;
+    else
+      return false;
   }
+// create a new array by filter even numbers from the numbers array
+let OddNumbers = numbers.filter(checkOdd);
+console.log(OddNumbers);
+
+// Output :[1,3,5,7,9]
